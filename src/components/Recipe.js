@@ -8,6 +8,7 @@ class Recipe extends Component {
       source_url,
       publisher
     } = this.props.recipe;
+
     return (
       <React.Fragment>
         {/* {console.log(recipe)} */}
@@ -26,7 +27,10 @@ class Recipe extends Component {
               </h6>
             </div>
             <div className="card-footer">
-              <button className="btn btn-primary text-capitalize">
+              <button
+                className="btn btn-primary text-capitalize"
+                onClick={() => this.props.handleDetails(0, recipe_id)}
+              >
                 details
               </button>
               <a
